@@ -4,7 +4,7 @@
 1. Halaman Docker Hub
 URL Docker Hub: https://hub.docker.com/r/aryaprayogi16/testkominfo
 2. Mengunduh Image
-Buka terminal atau Command Prompt, lalu jalankan perintah berikut untuk menarik (pull) image: docker pull aryaprayogi16/testkominfo:latest
+Buka terminal atau Command Prompt, lalu jalankan perintah berikut untuk pull image: docker pull aryaprayogi16/testkominfo:latest
 3. Menjalankan Image
 Setelah image berhasil diunduh, container dapat dijalankan dengan perintah berikut:
 docker run -d -p 80:80 aryaprayogi16/testkominfo:latest
