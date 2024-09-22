@@ -53,7 +53,7 @@ class OrderController extends Controller
         }
 
         // Create the order
-        $order = Order::create(); // Assumes you have an order model with proper fillable fields
+        $order = Order::create(); 
 
         return response()->json([
             'message' => 'Order created',
