@@ -5,16 +5,16 @@
 
 URL Docker Hub: https://hub.docker.com/r/aryaprayogi16/testkominfo
 
-3. Mengunduh Image
+2. Mengunduh Image
 
 Buka melalui Command Prompt, lalu jalankan perintah berikut untuk pull image: docker pull aryaprayogi16/testkominfo:latest
 
-4. Menjalankan Image
+3. Menjalankan Image
    
 Setelah image berhasil diunduh, container dapat dijalankan dengan perintah berikut:
 docker run -d -p 80:80 aryaprayogi16/testkominfo:latest
 
-6. Akses link http://localhost untuk mencoba koneksi
+4. Akses link http://localhost untuk mencoba koneksi
 
 
 
