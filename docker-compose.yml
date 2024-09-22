@@ -1,0 +1,44 @@
+
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    networks:
+      - mynetwork
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - mynetwork
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: laravel_db
+      MYSQL_USER: arya
+      MYSQL_PASSWORD: arya16
+      MYSQL_ROOT_PASSWORD: rootpassword  # Ganti dengan password root sesuai kebutuhan
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  db_data:
